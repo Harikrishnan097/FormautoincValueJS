@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+        
+        
+    </head>
+    <body   onload=inc()>
+        <script>
+var seq=0;
+function inc() {
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
+val="RCA"+today;
+  seq= val.concat(Math.random().toString(36).substring(2, 5) );
+
+    document.getElementById("data").value = seq;
+}
+</script>
+       <form>
+           <input type="text" id="data">
+           
+       </form> 
+        
+        
+    </body>
+    
+</html>
